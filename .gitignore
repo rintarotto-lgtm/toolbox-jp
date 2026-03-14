@@ -1,0 +1,8 @@
+node_modules/
+.next/
+out/
+.claude/
+.env
+.env.local
+.env.production
+*.tsbuildinfo
