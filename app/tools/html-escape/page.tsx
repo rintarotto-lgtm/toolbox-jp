@@ -4,25 +4,27 @@ import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
 
-export default function Base64Tool() {
+const escapeMap: Record<string, string> = {
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+};
+const unescapeMap: Record<string, string> = Object.fromEntries(
+  Object.entries(escapeMap).map(([k, v]) => [v, k])
+);
+
+export default function HtmlEscapeTool() {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
-  const [mode, setMode] = useState<"encode" | "decode">("encode");
-  const [error, setError] = useState("");
+  const [mode, setMode] = useState<"escape" | "unescape">("escape");
 
-  const convert = (text: string, m: "encode" | "decode") => {
+  const convert = (text: string, m: "escape" | "unescape") => {
     setInput(text);
     setMode(m);
-    setError("");
-    try {
-      if (m === "encode") {
-        setOutput(btoa(unescape(encodeURIComponent(text))));
-      } else {
-        setOutput(decodeURIComponent(escape(atob(text))));
-      }
-    } catch {
-      setError("変換に失敗しました。入力を確認してください。");
-      setOutput("");
+    if (m === "escape") {
+      setOutput(text.replace(/[&<>"']/g, (c) => escapeMap[c] || c));
+    } else {
+      setOutput(
+        text.replace(/&amp;|&lt;|&gt;|&quot;|&#39;/g, (c) => unescapeMap[c] || c)
+      );
     }
   };
 
@@ -30,25 +32,25 @@ export default function Base64Tool() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <h1 className="text-2xl font-bold mb-2">Base64変換</h1>
+      <h1 className="text-2xl font-bold mb-2">HTMLエスケープ/アンエスケープ</h1>
       <p className="text-gray-500 text-sm mb-6">
-        テキストをBase64にエンコード・デコードします。日本語も対応。
+        HTML特殊文字をエスケープ・アンエスケープします。XSS対策にも。
       </p>
 
       <AdBanner />
 
       <div className="flex gap-2 mb-4">
         <button
-          onClick={() => convert(input, "encode")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium ${mode === "encode" ? "bg-blue-600 text-white" : "bg-white border border-gray-300"}`}
+          onClick={() => convert(input, "escape")}
+          className={`px-4 py-2 rounded-lg text-sm font-medium ${mode === "escape" ? "bg-blue-600 text-white" : "bg-white border border-gray-300"}`}
         >
-          エンコード
+          エスケープ
         </button>
         <button
-          onClick={() => convert(input, "decode")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium ${mode === "decode" ? "bg-blue-600 text-white" : "bg-white border border-gray-300"}`}
+          onClick={() => convert(input, "unescape")}
+          className={`px-4 py-2 rounded-lg text-sm font-medium ${mode === "unescape" ? "bg-blue-600 text-white" : "bg-white border border-gray-300"}`}
         >
-          デコード
+          アンエスケープ
         </button>
       </div>
 
@@ -58,13 +60,10 @@ export default function Base64Tool() {
           <textarea
             value={input}
             onChange={(e) => convert(e.target.value, mode)}
-            placeholder={mode === "encode" ? "テキストを入力..." : "Base64文字列を入力..."}
+            placeholder={mode === "escape" ? '<div class="test">' : "&lt;div class=&quot;test&quot;&gt;"}
             className="w-full h-32 p-3 border border-gray-300 rounded-lg font-mono text-sm resize-y focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-
-        {error && <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">{error}</div>}
-
         <div>
           <div className="flex justify-between items-center mb-1">
             <label className="text-sm font-medium text-gray-700">出力</label>
@@ -79,7 +78,7 @@ export default function Base64Tool() {
       </div>
 
       <AdBanner />
-      <RelatedTools currentToolId="base64" />
+      <RelatedTools currentToolId="html-escape" />
     </div>
   );
 }

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export default function JsonFormatter() {
   const [input, setInput] = useState("");
@@ -91,6 +93,35 @@ export default function JsonFormatter() {
       </div>
 
       <AdBanner />
+
+      <section className="mt-10 bg-white rounded-xl border border-gray-200 p-6">
+        <h2 className="font-bold text-gray-900 mb-3">JSON整形ツールの使い方</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          左の入力欄にJSONデータをペーストし、「整形」ボタンで見やすく整形します。
+          「圧縮」ボタンで不要な空白を除去したミニファイ版を生成できます。
+          シンタックスエラーがある場合は、エラーメッセージで問題箇所を特定できます。
+          APIレスポンスの確認やJSON設定ファイルの編集に最適です。
+        </p>
+      </section>
+
+      <ToolFAQ
+        faqs={[
+          {
+            question: "JSON整形とは何ですか？",
+            answer: "JSONデータにインデント（字下げ）と改行を追加して、人間が読みやすい形式に変換することです。開発中のデバッグやデータ構造の確認に便利です。",
+          },
+          {
+            question: "JSONの圧縮（ミニファイ）は何に使いますか？",
+            answer: "不要な空白や改行を除去してデータサイズを最小化します。APIのリクエストボディや設定ファイルのサイズ削減、通信量の節約に使われます。",
+          },
+          {
+            question: "エラーが表示されるのですが？",
+            answer: "JSONの構文に問題がある場合にエラーが表示されます。よくある原因は、末尾のカンマ、引用符の不一致、キー名の引用符忘れなどです。エラーメッセージを参考に修正してください。",
+          },
+        ]}
+      />
+
+      <RelatedTools currentToolId="json-formatter" />
     </div>
   );
 }

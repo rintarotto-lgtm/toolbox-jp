@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 function computeDiff(a: string, b: string): { type: "same" | "add" | "remove"; text: string }[] {
   const linesA = a.split("\n");
@@ -73,6 +74,7 @@ export default function TextDiff() {
       )}
 
       <AdBanner />
+      <RelatedTools currentToolId="text-diff" />
     </div>
   );
 }

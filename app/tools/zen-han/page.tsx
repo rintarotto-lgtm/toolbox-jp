@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 export default function ZenHanTool() {
   const [input, setInput] = useState("");
@@ -75,6 +76,7 @@ export default function ZenHanTool() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="zen-han" />
     </div>
   );
 }

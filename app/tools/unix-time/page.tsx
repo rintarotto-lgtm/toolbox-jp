@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 export default function UnixTimeTool() {
   const [now, setNow] = useState(Math.floor(Date.now() / 1000));
@@ -92,6 +93,7 @@ export default function UnixTimeTool() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="unix-time" />
     </div>
   );
 }

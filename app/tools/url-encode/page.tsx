@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 export default function UrlEncode() {
   const [input, setInput] = useState("");
@@ -57,6 +58,7 @@ export default function UrlEncode() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="url-encode" />
     </div>
   );
 }

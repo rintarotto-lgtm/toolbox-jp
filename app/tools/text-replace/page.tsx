@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 export default function TextReplace() {
   const [text, setText] = useState("");
@@ -89,6 +90,7 @@ export default function TextReplace() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="text-replace" />
     </div>
   );
 }

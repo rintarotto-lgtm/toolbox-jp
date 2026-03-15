@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 async function computeHash(text: string, algo: string): Promise<string> {
   const encoder = new TextEncoder();
@@ -86,6 +87,7 @@ export default function HashGenTool() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="hash-gen" />
     </div>
   );
 }

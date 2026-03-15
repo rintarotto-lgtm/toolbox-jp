@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export default function CharCounter() {
   const [text, setText] = useState("");
@@ -56,6 +58,29 @@ export default function CharCounter() {
           全角・半角の文字数も区別して表示します。TwitterやInstagramの文字数制限の確認、レポートの文字数チェックなどにご活用ください。
         </p>
       </section>
+
+      <ToolFAQ
+        faqs={[
+          {
+            question: "全角と半角の違いは何ですか？",
+            answer: "全角文字は日本語の漢字・ひらがな・カタカナなどで、1文字あたり2〜3バイトを使用します。半角文字は英数字や一部の記号で、1バイトで表現されます。",
+          },
+          {
+            question: "Twitterの文字数制限は何文字ですか？",
+            answer: "Twitter（X）の投稿は全角・半角問わず280文字までです。日本語の場合、全角1文字は2文字としてカウントされるため、実質140文字程度になります。",
+          },
+          {
+            question: "入力したデータはサーバーに送信されますか？",
+            answer: "いいえ。このツールは全てブラウザ上で動作するため、入力したテキストがサーバーに送信されることは一切ありません。安心してご利用ください。",
+          },
+          {
+            question: "バイト数とは何ですか？",
+            answer: "バイト数はテキストのデータサイズです。UTF-8エンコーディングでは、半角英数字は1バイト、日本語は3バイトを使用します。メール添付やデータベースの容量確認に便利です。",
+          },
+        ]}
+      />
+
+      <RelatedTools currentToolId="char-counter" />
     </div>
   );
 }

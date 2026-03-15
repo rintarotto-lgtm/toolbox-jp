@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 function getByteLength(str: string, encoding: string): number {
   if (encoding === "utf-8") {
@@ -92,6 +93,7 @@ export default function ByteCounterTool() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="byte-counter" />
     </div>
   );
 }

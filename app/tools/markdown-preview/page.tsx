@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 function parseMarkdown(md: string): string {
   let html = md
@@ -80,6 +81,7 @@ export default function MarkdownPreview() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="markdown-preview" />
     </div>
   );
 }

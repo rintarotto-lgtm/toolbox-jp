@@ -2,6 +2,8 @@
 
 import { useState, useCallback } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export default function PasswordGen() {
   const [length, setLength] = useState(16);
@@ -107,6 +109,34 @@ export default function PasswordGen() {
       </div>
 
       <AdBanner />
+
+      <section className="mt-10 bg-white rounded-xl border border-gray-200 p-6">
+        <h2 className="font-bold text-gray-900 mb-3">パスワード生成ツールの使い方</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          スライダーでパスワードの長さを設定し、含めたい文字種（大文字・小文字・数字・記号）を選択して「生成」ボタンを押すだけ。
+          暗号学的に安全な乱数を使用しているため、推測されにくい強力なパスワードが生成されます。
+          パスワード強度インジケーターで安全性も確認できます。
+        </p>
+      </section>
+
+      <ToolFAQ
+        faqs={[
+          {
+            question: "生成されたパスワードは安全ですか？",
+            answer: "はい。Web Crypto APIの暗号学的に安全な乱数生成器を使用しており、予測不可能なパスワードが生成されます。また、生成はすべてブラウザ上で行われ、サーバーには送信されません。",
+          },
+          {
+            question: "推奨されるパスワードの長さは？",
+            answer: "最低でも12文字以上、理想的には16文字以上を推奨します。大文字・小文字・数字・記号をすべて含めることで、ブルートフォース攻撃への耐性が大幅に向上します。",
+          },
+          {
+            question: "パスワード強度の「非常に強い」とはどういう意味ですか？",
+            answer: "エントロピー（情報量）が80ビット以上であることを示します。これは現在のコンピュータ技術では事実上解読不可能なレベルの安全性を意味します。",
+          },
+        ]}
+      />
+
+      <RelatedTools currentToolId="password-gen" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 function hexToRgb(hex: string): [number, number, number] | null {
   const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -110,6 +111,7 @@ export default function ColorConverter() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="color-converter" />
     </div>
   );
 }
