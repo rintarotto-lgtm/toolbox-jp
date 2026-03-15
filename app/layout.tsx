@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolbox-jp.vercel.app",
   },
+  verification: {
+    google: "1A0-02OsxiNJZzQOLn3H3CtGL08zQe2sJdz_Sgb9FpY",
+  },
 };
 
 const jsonLd = {
