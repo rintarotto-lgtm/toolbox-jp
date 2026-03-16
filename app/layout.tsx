@@ -3,7 +3,6 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Providers from "@/components/Providers";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID || "";
@@ -96,11 +95,9 @@ export default function RootLayout({
         )}
       </head>
       <body className="bg-gray-50 text-gray-900 min-h-screen flex flex-col antialiased">
-        <Providers>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </Providers>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
