@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 function getByteLength(str: string, encoding: string): number {
   if (encoding === "utf-8") {
@@ -93,6 +94,12 @@ export default function ByteCounterTool() {
       </div>
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "バイト数と文字数の違いは何ですか？", answer: "文字数は文字の個数を数えますが、バイト数は文字のデータサイズを表します。UTF-8では英数字は1バイト、日本語の漢字やひらがなは3バイトになるため、同じ文字数でもバイト数は異なります。" },
+        { question: "UTF-8とShift-JISでバイト数が違うのはなぜ？", answer: "文字エンコーディングによって各文字のバイト表現が異なるためです。例えば日本語の「あ」はUTF-8で3バイト、Shift-JISで2バイトです。データベースやAPIのサイズ制限を確認する際は、使用するエンコーディングに注意が必要です。" },
+        { question: "バイト数カウントはどのような場面で必要ですか？", answer: "データベースのカラムサイズ制限のチェック、APIリクエストのペイロードサイズ確認、メール件名の文字数制限、SMS文字数の計算、ファイルサイズの見積もりなど、開発やデータ処理の多くの場面で必要になります。" },
+        { question: "全角文字と半角文字のバイト数は？", answer: "UTF-8の場合、半角英数字は1バイト、全角ひらがな・カタカナ・漢字は3バイトです。UTF-16では半角・全角ともに基本的に2バイトです。Shift-JISでは半角1バイト、全角2バイトとなります。" },
+      ]} />
       <RelatedTools currentToolId="byte-counter" />
     </div>
   );

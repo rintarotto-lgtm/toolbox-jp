@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 function parseMarkdown(md: string): string {
   let html = md
@@ -81,6 +82,11 @@ export default function MarkdownPreview() {
       </div>
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "Markdownとは何ですか？", answer: "Markdownは、テキストを簡単な記法で構造化できる軽量マークアップ言語です。見出し、太字、リスト、リンクなどをシンプルな記号で記述でき、GitHubのREADMEやブログ記事、技術ドキュメントで広く使われています。" },
+        { question: "Markdownプレビューの使い方は？", answer: "左側のエディタにMarkdown記法でテキストを入力すると、右側にリアルタイムでHTML変換されたプレビューが表示されます。見出し（#）、太字（**）、リスト（-）などの基本記法に対応しています。" },
+        { question: "Markdownで使える主な記法は？", answer: "主な記法として、# 見出し、** 太字 **、* 斜体 *、- 箇条書きリスト、1. 番号付きリスト、> 引用、` インラインコード `、--- 水平線などがあります。" },
+      ]} />
       <RelatedTools currentToolId="markdown-preview" />
     </div>
   );

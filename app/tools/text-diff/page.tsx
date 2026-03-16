@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 function computeDiff(a: string, b: string): { type: "same" | "add" | "remove"; text: string }[] {
   const linesA = a.split("\n");
@@ -74,6 +75,11 @@ export default function TextDiff() {
       )}
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "テキスト差分比較（diff）とは何ですか？", answer: "テキスト差分比較（diff）とは、2つのテキストを行単位で比較し、追加・削除・変更された箇所をハイライト表示する機能です。コードレビューやドキュメントの変更確認に広く使われています。" },
+        { question: "差分比較ツールの使い方は？", answer: "左側に変更前のテキスト、右側に変更後のテキストを入力して「比較する」ボタンをクリックします。追加行は緑色、削除行は赤色でハイライト表示され、変更箇所が一目で分かります。" },
+        { question: "オンラインでテキストの差分を確認するメリットは？", answer: "ブラウザ上で動作するため、ソフトウェアのインストール不要で手軽にテキスト比較ができます。コード変更、文書の修正確認、設定ファイルの差分チェックなどに便利です。データはサーバーに送信されないため安全です。" },
+      ]} />
       <RelatedTools currentToolId="text-diff" />
     </div>
   );

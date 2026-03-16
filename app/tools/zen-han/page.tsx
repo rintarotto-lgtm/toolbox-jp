@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export default function ZenHanTool() {
   const [input, setInput] = useState("");
@@ -76,6 +77,11 @@ export default function ZenHanTool() {
       </div>
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "全角と半角の違いは何ですか？", answer: "全角文字は日本語の文字幅に合わせた広い文字（Ａ、１、＠など）で、半角文字は英語圏で標準的な狭い文字（A、1、@など）です。データ入力やプログラミングでは半角が推奨されることが多く、統一が必要な場面で変換ツールが活躍します。" },
+        { question: "半角全角変換はどのような場面で使いますか？", answer: "データベースへの登録前の文字統一、CSVファイルの整形、フォーム入力の正規化、住所や電話番号の書式統一など、データクレンジングの場面で広く使われます。特に日本語テキスト処理では必須の前処理です。" },
+        { question: "カタカナの半角全角変換にも対応していますか？", answer: "本ツールは英数字と記号の半角・全角変換に対応しています。全角英数字（Ａ-Ｚ、ａ-ｚ、０-９）と半角英数字、および全角記号と半角記号の相互変換が可能です。" },
+      ]} />
       <RelatedTools currentToolId="zen-han" />
     </div>
   );

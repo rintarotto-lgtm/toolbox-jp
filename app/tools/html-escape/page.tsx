@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 const escapeMap: Record<string, string> = {
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
@@ -78,6 +79,11 @@ export default function HtmlEscapeTool() {
       </div>
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "HTMLエスケープとは何ですか？", answer: "HTMLエスケープとは、HTMLで特殊な意味を持つ文字（<, >, &, \", '）を文字参照（&lt;, &gt;など）に変換する処理です。Webページ上でHTMLタグをそのまま表示したい場合や、XSS（クロスサイトスクリプティング）対策に必須です。" },
+        { question: "HTMLアンエスケープとは何ですか？", answer: "HTMLアンエスケープとは、&lt;や&amp;などの文字参照を元の文字（<, &）に戻す処理です。HTMLソースからプレーンテキストを取得したい場合や、エスケープ済みデータを復元する際に使用します。" },
+        { question: "XSS対策にHTMLエスケープが必要な理由は？", answer: "ユーザー入力をエスケープせずにHTMLに埋め込むと、悪意のあるスクリプトが実行されるXSS攻撃のリスクがあります。HTMLエスケープにより、入力値がHTMLタグとして解釈されることを防ぎ、Webアプリケーションの安全性を確保できます。" },
+      ]} />
       <RelatedTools currentToolId="html-escape" />
     </div>
   );

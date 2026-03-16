@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 const jaTexts = [
   "吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。",
@@ -104,6 +105,11 @@ export default function LoremIpsumTool() {
       </div>
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "ダミーテキスト（Lorem Ipsum）とは何ですか？", answer: "Lorem Ipsumは、Webデザインや印刷物のレイアウト確認用に使われるダミーテキストです。内容に意味がないため、デザインの見た目やフォント、行間の確認に集中できます。16世紀から使われている歴史ある手法です。" },
+        { question: "日本語のダミーテキストが必要な理由は？", answer: "日本語サイトのデザインでは、英語のLorem Ipsumだと文字幅や行間が実際と異なり正確なレイアウト確認ができません。日本語ダミーテキストを使うことで、本番に近い見た目でデザインを確認できます。" },
+        { question: "段落と文の違いは何ですか？", answer: "「段落」モードでは複数の文をまとめた段落単位でテキストを生成します。「文」モードでは1文ずつ個別に生成します。用途に応じて使い分けることで、必要なテキスト量を調整できます。" },
+      ]} />
       <RelatedTools currentToolId="lorem-ipsum" />
     </div>
   );

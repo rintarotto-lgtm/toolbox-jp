@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export default function TextReplace() {
   const [text, setText] = useState("");
@@ -90,6 +91,12 @@ export default function TextReplace() {
       </div>
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "テキスト一括置換ツールの使い方は？", answer: "テキストを入力欄に貼り付け、検索文字列と置換文字列を指定して「置換実行」ボタンをクリックします。一度に全ての該当箇所が置換され、置換件数も表示されます。" },
+        { question: "正規表現を使った置換はできますか？", answer: "はい、「正規表現を使用」にチェックを入れることで、正規表現パターンによる高度な一括置換が可能です。例えば、\\d+で数字のマッチング、(.*?)でグループキャプチャなどが使えます。" },
+        { question: "大文字・小文字を区別せずに置換できますか？", answer: "「大文字/小文字を区別」のチェックを外すことで、大文字と小文字を区別しない置換（ケースインセンシティブ置換）が可能です。英文テキストの編集に便利です。" },
+        { question: "オンラインテキスト置換のメリットは？", answer: "ブラウザ上で動作するため、ソフトウェアのインストールなしで大量のテキストを一括置換できます。データはサーバーに送信されず、すべてブラウザ内で処理されるため安全です。" },
+      ]} />
       <RelatedTools currentToolId="text-replace" />
     </div>
   );

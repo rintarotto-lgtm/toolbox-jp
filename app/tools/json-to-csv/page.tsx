@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export default function JsonToCsvTool() {
   const [input, setInput] = useState("");
@@ -94,6 +95,12 @@ export default function JsonToCsvTool() {
       </div>
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "JSONからCSVへの変換とは？", answer: "JSON（JavaScript Object Notation）形式のデータ配列を、CSV（Comma-Separated Values）形式に変換する処理です。APIから取得したJSONデータをExcelやGoogleスプレッドシートで扱いたい場合に便利です。" },
+        { question: "どのようなJSON形式に対応していますか？", answer: "オブジェクトの配列形式（[{...}, {...}]）に対応しています。各オブジェクトのキーがCSVのヘッダー列になり、値が各行のデータになります。ネストされたオブジェクトは文字列として出力されます。" },
+        { question: "変換したCSVをExcelで開けますか？", answer: "はい、「CSVダウンロード」ボタンでファイルをダウンロードし、ExcelやGoogleスプレッドシートで直接開けます。UTF-8エンコーディングで出力されるため、日本語データも正しく表示されます。" },
+        { question: "JSONデータのプライバシーは安全ですか？", answer: "本ツールはすべての処理をブラウザ内で実行しており、入力データがサーバーに送信されることはありません。機密データを含むJSONも安全に変換できます。" },
+      ]} />
       <RelatedTools currentToolId="json-to-csv" />
     </div>
   );

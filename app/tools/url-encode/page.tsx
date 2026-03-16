@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export default function UrlEncode() {
   const [input, setInput] = useState("");
@@ -57,6 +58,11 @@ export default function UrlEncode() {
         <textarea value={output} readOnly className="w-full h-28 p-3 border border-gray-200 rounded-lg font-mono text-sm bg-gray-50 resize-y" />
       </div>
 
+      <ToolFAQ faqs={[
+        { question: "URLエンコードとは何ですか？", answer: "URLエンコード（パーセントエンコーディング）は、URL内で使用できない文字を%に続く16進数で表現する変換方式です。日本語や特殊文字をURLに含める際に必要です。" },
+        { question: "なぜURLエンコードが必要なのですか？", answer: "URLには使用できる文字が限られています。日本語、スペース、&、=などの特殊文字はそのままURLに含めると正しく処理されないため、エンコードが必要です。" },
+        { question: "encodeURIとencodeURIComponentの違いは？", answer: "encodeURIはURL全体をエンコードし、://や?&=はそのまま残します。encodeURIComponentはパラメータ値をエンコードし、全ての特殊文字を変換します。このツールはencodeURIComponentを使用しています。" },
+      ]} />
       <AdBanner />
       <RelatedTools currentToolId="url-encode" />
     </div>

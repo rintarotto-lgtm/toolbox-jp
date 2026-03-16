@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 function hexToRgb(hex: string): [number, number, number] | null {
   const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -110,6 +111,11 @@ export default function ColorConverter() {
         </div>
       </div>
 
+      <ToolFAQ faqs={[
+        { question: "HEX、RGB、HSLの違いは何ですか？", answer: "HEXは16進数6桁で色を表現（例: #FF0000）。RGBは赤・緑・青の0-255の値で色を表現。HSLは色相・彩度・輝度で色を表現します。CSSではいずれの形式も使用できます。" },
+        { question: "Webデザインではどのカラーコードを使うべきですか？", answer: "CSSではHEXが最も一般的です。透明度が必要な場合はRGBA、色の調整がしやすいのはHSLです。プロジェクトの規約に合わせて選択してください。" },
+        { question: "カラーコードの変換は正確ですか？", answer: "はい、数学的に正確な変換を行います。HEX↔RGB は完全な変換が可能です。HSLへの変換では四捨五入により微小な誤差が生じる場合がありますが、視覚的な差はありません。" },
+      ]} />
       <AdBanner />
       <RelatedTools currentToolId="color-converter" />
     </div>

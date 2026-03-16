@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export default function Base64Tool() {
   const [input, setInput] = useState("");
@@ -78,6 +79,12 @@ export default function Base64Tool() {
         </div>
       </div>
 
+      <ToolFAQ faqs={[
+        { question: "Base64とは何ですか？", answer: "Base64は、バイナリデータをASCII文字列に変換するエンコード方式です。メール添付やURLに安全にデータを埋め込む際に使用されます。" },
+        { question: "Base64エンコードするとデータサイズはどうなりますか？", answer: "Base64エンコードすると、元のデータより約33%サイズが増加します。3バイトのデータが4文字に変換されるためです。" },
+        { question: "日本語テキストもBase64変換できますか？", answer: "はい、このツールはUTF-8エンコーディングに対応しているため、日本語テキストも正しくBase64変換できます。" },
+        { question: "Base64はデータの暗号化に使えますか？", answer: "いいえ、Base64は暗号化ではなくエンコード方式です。誰でも簡単にデコードできるため、機密データの保護には適していません。暗号化にはAESなどを使用してください。" },
+      ]} />
       <AdBanner />
       <RelatedTools currentToolId="base64" />
     </div>

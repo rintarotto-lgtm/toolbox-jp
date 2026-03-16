@@ -3,6 +3,7 @@
 import { useState } from "react";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import ToolFAQ from "@/components/ToolFAQ";
 
 async function computeHash(text: string, algo: string): Promise<string> {
   const encoder = new TextEncoder();
@@ -87,6 +88,12 @@ export default function HashGenTool() {
       </div>
 
       <AdBanner />
+      <ToolFAQ faqs={[
+        { question: "ハッシュ値とは何ですか？", answer: "ハッシュ値とは、任意のデータを固定長の英数字文字列に変換した値です。同じ入力からは常に同じハッシュ値が生成され、データの改ざん検知やパスワードの安全な保存に利用されます。" },
+        { question: "SHA-256とMD5の違いは何ですか？", answer: "MD5は128ビットのハッシュ値を生成しますが、衝突攻撃への脆弱性が発見されておりセキュリティ用途には推奨されません。SHA-256は256ビットのハッシュ値を生成し、現在も安全とされる暗号学的ハッシュ関数です。" },
+        { question: "ハッシュ値からパスワードを復元できますか？", answer: "ハッシュ関数は一方向関数のため、ハッシュ値から元のパスワードを直接復元することはできません。ただし、短い・単純なパスワードはレインボーテーブル攻撃で推測される可能性があるため、ソルト付きハッシュの使用が推奨されます。" },
+        { question: "ファイルのハッシュ値チェックサムとは？", answer: "ファイルのチェックサムは、ダウンロードしたファイルが改ざんされていないか検証するために使われるハッシュ値です。配布元のハッシュ値と比較することで、ファイルの完全性を確認できます。" },
+      ]} />
       <RelatedTools currentToolId="hash-gen" />
     </div>
   );

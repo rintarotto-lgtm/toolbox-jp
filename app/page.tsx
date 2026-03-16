@@ -31,12 +31,41 @@ export default function Home() {
           <p>
             ToolBoxは、Web開発者・デザイナー・ライターの日常業務をサポートする無料オンラインツール集です。
             全てのツールはブラウザ上で動作するため、入力したデータがサーバーに送信されることはありません。
+            プライバシーを重視し、安心して利用できます。
           </p>
           <p>
-            文字数カウント、JSON整形、QRコード生成、パスワード生成、Base64変換、URLエンコード、
-            カラーコード変換、テキスト差分比較、Markdownプレビュー、テキスト一括置換など、
-            10種類以上のツールを提供しています。
+            文字数カウント、JSON整形・フォーマッター、QRコード生成、パスワード生成、Base64エンコード・デコード、
+            URLエンコード・デコード、カラーコード変換（HEX・RGB・HSL）、テキスト差分比較、Markdownプレビュー、
+            テキスト一括置換、半角全角変換、ハッシュ生成（SHA-256等）、Unix時間変換、バイト数カウント、
+            正規表現テスター、HTMLエスケープ・アンエスケープ、SNS文字数チェッカー、ダミーテキスト生成、
+            JSON→CSV変換、アスペクト比計算、進数変換（2進数・8進数・16進数）など、21種類以上のツールを無料で提供しています。
           </p>
+          <p>
+            インストール不要で、PC・スマートフォン・タブレットからいつでもアクセスできます。
+            ブックマークに追加して、日々の作業効率化にお役立てください。
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-8 bg-white rounded-xl border border-gray-200 p-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">カテゴリ別ツール一覧</h2>
+        <div className="text-sm text-gray-600 space-y-4 leading-relaxed">
+          <div>
+            <h3 className="font-bold text-gray-800 mb-1">📝 テキスト・文字列ツール</h3>
+            <p>文字数カウンター、SNS文字数チェッカー、バイト数カウント、テキスト一括置換、半角全角変換、ダミーテキスト生成、テキスト差分比較</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-gray-800 mb-1">💻 開発者ツール</h3>
+            <p>JSON整形ツール、Base64エンコード・デコード、URLエンコード・デコード、HTMLエスケープ、正規表現テスター、ハッシュ生成、Unix時間変換、進数変換、JSON→CSV変換</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-gray-800 mb-1">🎨 デザイン・メディアツール</h3>
+            <p>カラーコード変換、QRコード生成、アスペクト比計算、Markdownプレビュー</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-gray-800 mb-1">🔒 セキュリティツール</h3>
+            <p>パスワード生成（安全なランダムパスワード）、ハッシュ生成（SHA-1/256/384/512）</p>
+          </div>
         </div>
       </section>
     </div>
