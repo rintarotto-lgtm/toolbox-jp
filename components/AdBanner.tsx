@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePlan } from "@/lib/hooks/use-plan";
 
 declare global {
   interface Window {
@@ -11,6 +12,10 @@ declare global {
 export default function AdBanner() {
   const pushed = useRef(false);
   const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID || "";
+  const { isPro } = usePlan();
+
+  // Pro/Team users: no ads
+  if (isPro) return null;
 
   useEffect(() => {
     if (!adsenseId || pushed.current) return;
