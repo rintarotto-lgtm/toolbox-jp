@@ -22,12 +22,12 @@ export default function RelatedTools({ currentToolId }: Props) {
   const related = [
     ...sameCategory,
     ...otherCategory.sort(() => 0.5 - Math.random()),
-  ].slice(0, 4);
+  ].slice(0, 6);
 
   return (
     <div className="mt-10 pt-8 border-t border-gray-200">
       <h2 className="text-lg font-bold text-gray-800 mb-4">🔧 関連ツール</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {related.map((tool) => (
           <Link
             key={tool.id}
