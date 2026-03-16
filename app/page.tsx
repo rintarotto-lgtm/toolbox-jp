@@ -38,7 +38,8 @@ export default function Home() {
             URLエンコード・デコード、カラーコード変換（HEX・RGB・HSL）、テキスト差分比較、Markdownプレビュー、
             テキスト一括置換、半角全角変換、ハッシュ生成（SHA-256等）、Unix時間変換、バイト数カウント、
             正規表現テスター、HTMLエスケープ・アンエスケープ、SNS文字数チェッカー、ダミーテキスト生成、
-            JSON→CSV変換、アスペクト比計算、進数変換（2進数・8進数・16進数）など、21種類以上のツールを無料で提供しています。
+            JSON→CSV変換、アスペクト比計算、進数変換（2進数・8進数・16進数）、JWTデコーダー、Cron式解説、
+            文字コード判定、IPアドレス情報・CIDR計算など、25種類以上のツールを無料で提供しています。
           </p>
           <p>
             インストール不要で、PC・スマートフォン・タブレットからいつでもアクセスできます。
@@ -52,11 +53,11 @@ export default function Home() {
         <div className="text-sm text-gray-600 space-y-4 leading-relaxed">
           <div>
             <h3 className="font-bold text-gray-800 mb-1">📝 テキスト・文字列ツール</h3>
-            <p>文字数カウンター、SNS文字数チェッカー、バイト数カウント、テキスト一括置換、半角全角変換、ダミーテキスト生成、テキスト差分比較</p>
+            <p>文字数カウンター、SNS文字数チェッカー、バイト数カウント、テキスト一括置換、半角全角変換、ダミーテキスト生成、テキスト差分比較、Markdownプレビュー、文字コード判定</p>
           </div>
           <div>
             <h3 className="font-bold text-gray-800 mb-1">💻 開発者ツール</h3>
-            <p>JSON整形ツール、Base64エンコード・デコード、URLエンコード・デコード、HTMLエスケープ、正規表現テスター、ハッシュ生成、Unix時間変換、進数変換、JSON→CSV変換</p>
+            <p>JSON整形ツール、Base64エンコード・デコード、URLエンコード・デコード、HTMLエスケープ、正規表現テスター、ハッシュ生成、Unix時間変換、進数変換、JSON→CSV変換、JWTデコーダー、Cron式解説、バイト数カウント、IPアドレス情報・CIDR計算</p>
           </div>
           <div>
             <h3 className="font-bold text-gray-800 mb-1">🎨 デザイン・メディアツール</h3>
