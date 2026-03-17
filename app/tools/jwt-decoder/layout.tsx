@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "JWTトークンをHeader・Payload・Signatureに分解して表示。有効期限やクレーム情報を日本語で確認できるオンラインツール。",
   keywords: ["JWTデコード", "JWT解析", "JWTトークン", "JSON Web Token", "JWT検証"],
   openGraph: {
-    title: "JWTデコーダー - ツールボックス",
+    title: "JWTデコーダー",
     description: "JWTトークンをデコードしてHeader・Payload・Signatureを表示。",
   },
   alternates: {

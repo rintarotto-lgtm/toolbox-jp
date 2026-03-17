@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SQL整形ツール | SQLクエリフォーマッター - ツールボックス",
+  title: "SQL整形ツール | SQLクエリフォーマッター",
   description:
     "SQLクエリを見やすく整形・フォーマット。SELECT、INSERT、UPDATE、DELETE文に対応。インデント付きで可読性アップ。",
   openGraph: {
-    title: "SQL整形ツール | SQLクエリフォーマッター - ツールボックス",
+    title: "SQL整形ツール | SQLクエリフォーマッター",
     description:
       "SQLクエリを見やすく整形・フォーマット。SELECT、INSERT、UPDATE、DELETE文に対応。",
     url: "https://toolbox-jp.vercel.app/tools/sql-formatter",

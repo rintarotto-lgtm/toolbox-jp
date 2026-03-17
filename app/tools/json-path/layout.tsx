@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSONPathテスター - JSONデータ抽出 - ツールボックス",
+  title: "JSONPathテスター - JSONデータ抽出",
   description: "JSONPathやJavaScriptのアクセス式でJSONデータからの値抽出をテスト。API開発・デバッグに便利。",
   alternates: { canonical: "https://toolbox-jp.vercel.app/tools/json-path" },
   openGraph: {
-    title: "JSONPathテスター - JSONデータ抽出 - ツールボックス",
+    title: "JSONPathテスター - JSONデータ抽出",
     description: "JSONPathやJavaScriptのアクセス式でJSONデータからの値抽出をテスト。API開発・デバッグに便利。",
     url: "https://toolbox-jp.vercel.app/tools/json-path",
   },

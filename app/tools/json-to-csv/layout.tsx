@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "JSON配列をCSV形式に変換するオンラインツール。ExcelやGoogleスプレッドシートへの貼り付けに最適。",
   keywords: ["JSON CSV変換", "JSON to CSV", "JSONからCSV", "CSV変換", "データ変換"],
   openGraph: {
-    title: "JSON → CSV変換 - ツールボックス",
+    title: "JSON → CSV変換",
     description: "JSON配列をCSVに変換。ブラウザ上で完結。",
   },
   alternates: {
