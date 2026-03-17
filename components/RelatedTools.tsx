@@ -19,9 +19,10 @@ export default function RelatedTools({ currentToolId }: Props) {
     (t) => t.id !== currentToolId && t.category !== currentTool.category
   );
 
+  // Deterministic selection: same category first, then others in stable order
   const related = [
     ...sameCategory,
-    ...otherCategory.sort(() => 0.5 - Math.random()),
+    ...otherCategory,
   ].slice(0, 6);
 
   return (
