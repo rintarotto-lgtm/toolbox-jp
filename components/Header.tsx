@@ -9,7 +9,6 @@ export default function Header() {
         </Link>
         <nav className="hidden sm:flex gap-6 text-sm text-gray-600">
           <Link href="/" className="hover:text-gray-900">ツール一覧</Link>
-          <Link href="/dashboard" className="hover:text-gray-900">📊 ダッシュボード</Link>
         </nav>
       </div>
     </header>
