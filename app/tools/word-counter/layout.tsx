@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Twitter、Instagram、YouTube等のSNS文字数制限をリアルタイムでチェック。投稿前の文字数確認に最適。",
   keywords: ["SNS文字数", "Twitter文字数", "Instagram文字数", "文字数制限", "文字数チェッカー"],
   openGraph: {
-    title: "SNS文字数チェッカー - ToolBox",
+    title: "SNS文字数チェッカー - ツールボックス",
     description: "各SNSの文字数制限をリアルタイムチェック。ブラウザ上で完結。",
   },
   alternates: {

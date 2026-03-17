@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "日本語・英語のダミーテキスト（Lorem Ipsum）を生成するオンラインツール。デザインやレイアウト確認に最適。",
   keywords: ["ダミーテキスト", "Lorem Ipsum", "テスト文章", "サンプルテキスト", "ダミー文章"],
   openGraph: {
-    title: "ダミーテキスト生成 - ToolBox",
+    title: "ダミーテキスト生成 - ツールボックス",
     description: "日本語・英語のダミーテキストを生成。ブラウザ上で完結。",
   },
   alternates: {

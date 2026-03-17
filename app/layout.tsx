@@ -9,8 +9,8 @@ const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID || "";
 
 export const metadata: Metadata = {
   title: {
-    default: "ToolBox - 無料オンラインツール集",
-    template: "%s | ToolBox",
+    default: "ツールボックス - 無料オンラインツール集",
+    template: "%s | ツールボックス",
   },
   description:
     "文字数カウント、JSON整形、QRコード生成、パスワード生成など、便利なオンラインツールが全て無料。ブラウザ上で動作し、データは一切送信しません。",
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://toolbox-jp.vercel.app"),
   openGraph: {
-    title: "ToolBox - 無料オンラインツール集",
+    title: "ツールボックス - 無料オンラインツール集",
     description: "便利なオンラインツールが全て無料。ブラウザ上で完結、データ送信なし。",
     type: "website",
     locale: "ja_JP",
     url: "https://toolbox-jp.vercel.app",
-    siteName: "ToolBox",
+    siteName: "ツールボックス",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ToolBox - 無料オンラインツール集",
+    title: "ツールボックス - 無料オンラインツール集",
     description: "便利なオンラインツールが全て無料。ブラウザ上で完結。",
   },
   alternates: {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "ToolBox",
+  name: "ツールボックス",
   url: "https://toolbox-jp.vercel.app",
   description: "無料で使える便利なオンラインツール集。文字数カウント、JSON整形、QRコード生成など。",
   inLanguage: "ja",

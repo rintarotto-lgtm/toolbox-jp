@@ -14,22 +14,19 @@ export default function ToolCard({ tool }: { tool: Tool }) {
   return (
     <Link
       href={tool.path}
-      className="block bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg hover:border-blue-300 transition-all group"
+      className="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg hover:border-blue-300 transition-all group"
     >
-      <div className="flex items-start gap-4">
-        <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 ${color}`}>
+      <div className="flex items-start gap-3">
+        <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${color}`}>
           {tool.icon}
         </div>
-        <div>
-          <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+        <div className="min-w-0">
+          <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors text-sm">
             {tool.name}
           </h3>
-          <p className="text-sm text-gray-500 mt-1 leading-relaxed">
+          <p className="text-xs text-gray-500 mt-1 leading-relaxed line-clamp-2">
             {tool.description}
           </p>
-          <span className="inline-block mt-2 text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
-            {tool.category}
-          </span>
         </div>
       </div>
     </Link>

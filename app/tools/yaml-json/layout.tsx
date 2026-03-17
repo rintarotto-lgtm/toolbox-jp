@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "YAML ⇔ JSON変換ツール | YAML/JSON相互変換 - ToolBox",
+  title: "YAML ⇔ JSON変換ツール | YAML/JSON相互変換 - ツールボックス",
   description:
     "YAMLとJSONを相互変換。Docker ComposeやKubernetesの設定ファイル変換に便利。シンタックスエラー検出付き。",
   alternates: {

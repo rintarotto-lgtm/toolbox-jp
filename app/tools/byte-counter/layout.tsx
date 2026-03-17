@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "テキストのバイト数をUTF-8、UTF-16、Shift-JISで計算するオンラインツール。半角・全角の区別も一目でわかる。",
   keywords: ["バイト数カウント", "文字コード判定", "バイトカウント", "UTF-8", "Shift-JIS"],
   openGraph: {
-    title: "バイト数カウント - ToolBox",
+    title: "バイト数カウント - ツールボックス",
     description: "テキストのバイト数を各文字コードで計算。ブラウザ上で完結。",
   },
   alternates: {

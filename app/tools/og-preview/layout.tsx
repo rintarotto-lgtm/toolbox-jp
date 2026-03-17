@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OGP画像プレビュー - SNSシェア表示確認 - ToolBox",
+  title: "OGP画像プレビュー - SNSシェア表示確認 - ツールボックス",
   description: "URLのOGPメタタグ情報を入力して、Twitter・Facebook等でのシェア時の表示をプレビュー。",
   alternates: { canonical: "https://toolbox-jp.vercel.app/tools/og-preview" },
 };

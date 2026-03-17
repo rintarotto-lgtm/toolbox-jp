@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "UUID/GUID生成ツール | v4ランダムUUID一括生成 - ToolBox",
+  title: "UUID/GUID生成ツール | v4ランダムUUID一括生成 - ツールボックス",
   description:
     "UUID（GUID）をワンクリックで生成。v4ランダムUUIDを1〜100個まで一括生成。コピーボタンで即利用。",
   alternates: {
