@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolbox-jp.vercel.app/tools/yaml-json",
   },
+  openGraph: {
+    title: "YAML ⇔ JSON変換ツール | YAML/JSON相互変換 - ツールボックス",
+    description: "YAMLとJSONを相互変換。Docker ComposeやKubernetesの設定ファイル変換に便利。",
+    url: "https://toolbox-jp.vercel.app/tools/yaml-json",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
