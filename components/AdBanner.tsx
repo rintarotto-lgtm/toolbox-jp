@@ -31,10 +31,10 @@ export default function AdBanner() {
   }
 
   return (
-    <div className="my-6">
+    <div className="my-4 min-h-0 overflow-hidden">
       <ins
         className="adsbygoogle"
-        style={{ display: "block" }}
+        style={{ display: "block", minHeight: 0 }}
         data-ad-client={adsenseId}
         data-ad-slot={process.env.NEXT_PUBLIC_AD_SLOT || ""}
         data-ad-format="auto"
