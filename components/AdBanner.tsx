@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 declare global {
   interface Window {
@@ -10,6 +10,8 @@ declare global {
 
 export default function AdBanner() {
   const pushed = useRef(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [hasAd, setHasAd] = useState(false);
   const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID || "";
 
   useEffect(() => {
@@ -20,18 +22,31 @@ export default function AdBanner() {
     } catch {
       // AdSense not loaded yet
     }
+
+    // Check if ad actually rendered after a delay
+    const timer = setTimeout(() => {
+      if (containerRef.current) {
+        const ins = containerRef.current.querySelector("ins");
+        if (ins && ins.offsetHeight > 0) {
+          setHasAd(true);
+        }
+      }
+    }, 3000);
+
+    return () => clearTimeout(timer);
   }, [adsenseId]);
 
   if (!adsenseId) {
-    return (
-      <div className="my-6 bg-gradient-to-r from-blue-50 to-purple-50 border border-dashed border-blue-200 rounded-lg p-4 text-center text-sm text-blue-400">
-        <p>📢 広告スペース（AdSense設定後に表示）</p>
-      </div>
-    );
+    return null;
   }
 
   return (
-    <div className="my-4 min-h-0 overflow-hidden">
+    <div
+      ref={containerRef}
+      className={`overflow-hidden transition-all duration-300 ${
+        hasAd ? "my-4" : "my-0 max-h-0"
+      }`}
+    >
       <ins
         className="adsbygoogle"
         style={{ display: "block", minHeight: 0 }}

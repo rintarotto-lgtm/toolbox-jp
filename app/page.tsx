@@ -3,25 +3,28 @@ import AdBanner from "@/components/AdBanner";
 import ToolSearch from "@/components/ToolSearch";
 import { tools } from "@/lib/tools";
 
-const categoryOrder = ["テキスト", "開発", "デザイン", "セキュリティ", "画像"] as const;
+const categoryOrder = ["テキスト", "開発", "計算", "デザイン", "セキュリティ", "画像"] as const;
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      <div className="text-center mb-10">
-        <div className="text-5xl mb-3">🧰</div>
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
+    <div className="max-w-6xl mx-auto px-4 py-6 sm:py-10">
+      <div className="text-center mb-6 sm:mb-10">
+        <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">🧰</div>
+        <h1 className="text-2xl sm:text-4xl font-bold text-gray-900">
           ツールボックス
         </h1>
-        <p className="mt-2 text-lg text-gray-500">
+        <p className="mt-1 sm:mt-2 text-base sm:text-lg text-gray-500">
           サクッと使える無料オンラインツール
         </p>
-        <p className="mt-1 text-sm text-gray-400">
+        <p className="mt-1 text-xs sm:text-sm text-gray-400">
           全{tools.length}種類 / ブラウザ完結 / データ送信なし
         </p>
       </div>
 
-      <AdBanner />
+      {/* Top ad - hidden on mobile to keep tools above the fold */}
+      <div className="hidden sm:block">
+        <AdBanner />
+      </div>
 
       <ToolSearch tools={tools} />
 

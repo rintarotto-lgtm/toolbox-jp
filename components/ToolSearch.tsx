@@ -9,6 +9,7 @@ const categories = [
   { key: "テキスト", label: "テキスト", icon: "📝" },
   { key: "開発", label: "開発", icon: "💻" },
   { key: "デザイン", label: "デザイン", icon: "🎨" },
+  { key: "計算", label: "計算", icon: "🔢" },
   { key: "セキュリティ", label: "セキュリティ", icon: "🔒" },
   { key: "画像", label: "画像", icon: "🖼" },
 ];
