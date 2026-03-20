@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     canonical: "https://toolbox-jp.net",
   },
   verification: {
-    google: "1A0-02OsxiNJZzQOLn3H3CtGL08zQe2sJdz_Sgb9FpY",
+    google: ["1A0-02OsxiNJZzQOLn3H3CtGL08zQe2sJdz_Sgb9FpY", "aHMDAA9lE0sflXePBTc9TQAwiMT6KAN0uqqdkXzjj7A"],
   },
 };
 
