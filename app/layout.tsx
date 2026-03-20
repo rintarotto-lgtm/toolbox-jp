@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     "テキスト差分",
     "Markdownプレビュー",
   ],
-  metadataBase: new URL("https://toolbox-jp.vercel.app"),
+  metadataBase: new URL("https://toolbox-jp.net"),
   openGraph: {
     title: "ツールボックス - 無料オンラインツール集",
     description: "便利なオンラインツールが全て無料。ブラウザ上で完結、データ送信なし。",
     type: "website",
     locale: "ja_JP",
-    url: "https://toolbox-jp.vercel.app",
+    url: "https://toolbox-jp.net",
     siteName: "ツールボックス",
   },
   twitter: {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: "便利なオンラインツールが全て無料。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app",
+    canonical: "https://toolbox-jp.net",
   },
   verification: {
     google: "1A0-02OsxiNJZzQOLn3H3CtGL08zQe2sJdz_Sgb9FpY",
@@ -53,12 +53,12 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "ツールボックス",
-  url: "https://toolbox-jp.vercel.app",
+  url: "https://toolbox-jp.net",
   description: "無料で使える便利なオンラインツール集。文字数カウント、JSON整形、QRコード生成など。",
   inLanguage: "ja",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://toolbox-jp.vercel.app/?q={search_term_string}",
+    target: "https://toolbox-jp.net/?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };

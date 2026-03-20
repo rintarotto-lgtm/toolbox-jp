@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "テキストの半角・全角を一括変換。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/zen-han",
+    canonical: "https://toolbox-jp.net/tools/zen-han",
   },
 };
 

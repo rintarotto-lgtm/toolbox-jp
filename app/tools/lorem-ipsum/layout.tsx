@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "日本語・英語のダミーテキストを生成。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/lorem-ipsum",
+    canonical: "https://toolbox-jp.net/tools/lorem-ipsum",
   },
 };
 

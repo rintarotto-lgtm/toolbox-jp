@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description:
     "YAMLとJSONを相互変換。Docker ComposeやKubernetesの設定ファイル変換に便利。シンタックスエラー検出付き。",
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/yaml-json",
+    canonical: "https://toolbox-jp.net/tools/yaml-json",
   },
   openGraph: {
     title: "YAML ⇔ JSON変換ツール | YAML/JSON相互変換",
     description: "YAMLとJSONを相互変換。Docker ComposeやKubernetesの設定ファイル変換に便利。",
-    url: "https://toolbox-jp.vercel.app/tools/yaml-json",
+    url: "https://toolbox-jp.net/tools/yaml-json",
   },
 };
 

@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description:
     "UUID（GUID）をワンクリックで生成。v4ランダムUUIDを1〜100個まで一括生成。コピーボタンで即利用。",
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/uuid-gen",
+    canonical: "https://toolbox-jp.net/tools/uuid-gen",
   },
   openGraph: {
     title: "UUID/GUID生成ツール | v4ランダムUUID一括生成",
     description: "UUID（GUID）をワンクリックで生成。v4ランダムUUIDを1〜100個まで一括生成。コピーボタンで即利用。",
-    url: "https://toolbox-jp.vercel.app/tools/uuid-gen",
+    url: "https://toolbox-jp.net/tools/uuid-gen",
   },
 };
 

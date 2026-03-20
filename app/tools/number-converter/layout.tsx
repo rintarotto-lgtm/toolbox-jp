@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "2進数・8進数・10進数・16進数を相互変換。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/number-converter",
+    canonical: "https://toolbox-jp.net/tools/number-converter",
   },
 };
 

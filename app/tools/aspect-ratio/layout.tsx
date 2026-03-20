@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "画像・動画のアスペクト比を計算。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/aspect-ratio",
+    canonical: "https://toolbox-jp.net/tools/aspect-ratio",
   },
 };
 

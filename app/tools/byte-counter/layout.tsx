@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "テキストのバイト数を各文字コードで計算。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/byte-counter",
+    canonical: "https://toolbox-jp.net/tools/byte-counter",
   },
 };
 

@@ -8,9 +8,9 @@ export const metadata: Metadata = {
     title: "文字コード判定ツール | UTF-8・Shift_JIS・EUC-JP検出",
     description:
       "テキストの文字コードを推定。16進ダンプ表示やバイト数カウントも。",
-    url: "https://toolbox-jp.vercel.app/tools/encoding-detector",
+    url: "https://toolbox-jp.net/tools/encoding-detector",
   },
-  alternates: { canonical: "https://toolbox-jp.vercel.app/tools/encoding-detector" },
+  alternates: { canonical: "https://toolbox-jp.net/tools/encoding-detector" },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

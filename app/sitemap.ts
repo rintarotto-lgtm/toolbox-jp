@@ -4,7 +4,7 @@ import { tools } from "@/lib/tools";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://toolbox-jp.vercel.app";
+  const baseUrl = "https://toolbox-jp.net";
   const now = new Date().toISOString();
 
   return [

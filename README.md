@@ -1,6 +1,6 @@
 # 🧰 ツールボックス
 
-**[toolbox-jp.vercel.app](https://toolbox-jp.vercel.app)** — 60種類以上の無料オンラインツール集
+**[toolbox-jp.net](https://toolbox-jp.net)** — 60種類以上の無料オンラインツール集
 
 ## 特徴
 
@@ -28,4 +28,4 @@
 
 ## リンク
 
-- 🌐 サイト: [toolbox-jp.vercel.app](https://toolbox-jp.vercel.app)
+- 🌐 サイト: [toolbox-jp.net](https://toolbox-jp.net)

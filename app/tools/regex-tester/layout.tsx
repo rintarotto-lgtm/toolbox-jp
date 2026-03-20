@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "正規表現をリアルタイムテスト。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/regex-tester",
+    canonical: "https://toolbox-jp.net/tools/regex-tester",
   },
 };
 

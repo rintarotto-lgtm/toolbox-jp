@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "CSVをJSONに変換。ヘッダー自動検出・区切り文字指定対応。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.vercel.app/tools/csv-to-json",
+    canonical: "https://toolbox-jp.net/tools/csv-to-json",
   },
 };
 
