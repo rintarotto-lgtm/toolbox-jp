@@ -657,4 +657,13 @@ export const tools: Tool[] = [
     category: "お金",
     keywords: ["副業税金", "副業確定申告", "副業手取り", "副業計算", "所得税計算"],
   },
+  {
+    id: "oshi-trip-calc",
+    name: "推し活遠征費計算",
+    description: "推しに会いに行く遠征費用を一括計算！交通費・宿泊費・チケット代・グッズ代の総額と節約プランを自動提案。",
+    icon: "🎤",
+    path: "/tools/oshi-trip-calc",
+    category: "推し活",
+    keywords: ["推し活", "遠征費", "ライブ遠征", "推し活費用", "オタ活"],
+  },
 ];

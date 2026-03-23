@@ -3,7 +3,7 @@ import AdBanner from "@/components/AdBanner";
 import ToolSearch from "@/components/ToolSearch";
 import { tools } from "@/lib/tools";
 
-const categoryOrder = ["フリマ", "お金", "テキスト", "開発", "計算", "デザイン", "セキュリティ", "画像"] as const;
+const categoryOrder = ["フリマ", "お金", "推し活", "テキスト", "開発", "計算", "デザイン", "セキュリティ", "画像"] as const;
 
 export default function Home() {
   return (
