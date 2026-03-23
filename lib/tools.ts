@@ -684,4 +684,13 @@ export const tools: Tool[] = [
     category: "お金",
     keywords: ["電気代計算", "電気代", "消費電力", "電気料金", "家電電気代"],
   },
+  {
+    id: "salary-calc",
+    name: "給料手取り計算",
+    description: "年収から手取り額を瞬時に計算。所得税・住民税・社会保険料の内訳も一目でわかるスライダー付き計算ツール。",
+    icon: "💰",
+    path: "/tools/salary-calc",
+    category: "お金",
+    keywords: ["手取り計算", "給料計算", "年収手取り", "所得税", "住民税"],
+  },
 ];
