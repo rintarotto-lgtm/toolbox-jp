@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import AdBanner from "@/components/AdBanner";
 
 /* ─── 定数 ─── */
@@ -122,10 +122,11 @@ function PieChart({ slices }: { slices: PieSlice[] }) {
   });
 
   function arcPath(startAngle: number, endAngle: number, r: number) {
-    const sx = 50 + r * Math.cos(startAngle);
-    const sy = 50 + r * Math.sin(startAngle);
-    const ex = 50 + r * Math.cos(endAngle);
-    const ey = 50 + r * Math.sin(endAngle);
+    const rd = (v: number) => Math.round(v * 1000) / 1000;
+    const sx = rd(50 + r * Math.cos(startAngle));
+    const sy = rd(50 + r * Math.sin(startAngle));
+    const ex = rd(50 + r * Math.cos(endAngle));
+    const ey = rd(50 + r * Math.sin(endAngle));
     const large = endAngle - startAngle > Math.PI ? 1 : 0;
     return `M 50 50 L ${sx} ${sy} A ${r} ${r} 0 ${large} 1 ${ex} ${ey} Z`;
   }
@@ -165,6 +166,9 @@ function PieChart({ slices }: { slices: PieSlice[] }) {
 /* ─── メインコンポーネント ─── */
 
 export default function OshiTripCalc() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   /* イベント情報 */
   const [eventName, setEventName] = useState("");
   const [destination, setDestination] = useState<City>("大阪");
@@ -354,7 +358,7 @@ export default function OshiTripCalc() {
 
           {/* パイチャート */}
           <div className="mt-5">
-            <PieChart slices={pieSlices} />
+            {mounted && <PieChart slices={pieSlices} />}
           </div>
         </div>
       )}
