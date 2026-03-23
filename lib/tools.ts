@@ -693,4 +693,13 @@ export const tools: Tool[] = [
     category: "お金",
     keywords: ["手取り計算", "給料計算", "年収手取り", "所得税", "住民税"],
   },
+  {
+    id: "living-cost",
+    name: "生活費シミュレーター",
+    description: "一人暮らしの月額生活費を項目別にシミュレーション。必要な手取り月収と年収目安もわかる。",
+    icon: "🏠",
+    path: "/tools/living-cost",
+    category: "お金",
+    keywords: ["生活費", "一人暮らし費用", "生活費計算", "一人暮らしシミュレーション"],
+  },
 ];
