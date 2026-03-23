@@ -675,4 +675,13 @@ export const tools: Tool[] = [
     category: "お金",
     keywords: ["引っ越し費用", "引っ越し計算", "初期費用", "敷金礼金", "引越し見積もり"],
   },
+  {
+    id: "electricity-calc",
+    name: "電気代計算ツール",
+    description: "エアコン・ドライヤー・テレビなど家電ごとの電気代を瞬時に計算。月額シミュレーションと節約比較も。",
+    icon: "⚡",
+    path: "/tools/electricity-calc",
+    category: "お金",
+    keywords: ["電気代計算", "電気代", "消費電力", "電気料金", "家電電気代"],
+  },
 ];
