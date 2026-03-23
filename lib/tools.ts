@@ -666,4 +666,13 @@ export const tools: Tool[] = [
     category: "推し活",
     keywords: ["推し活", "遠征費", "ライブ遠征", "推し活費用", "オタ活"],
   },
+  {
+    id: "moving-cost",
+    name: "引っ越し費用計算",
+    description: "引っ越しの総費用を一括計算。業者代・敷金礼金・仲介手数料・家具代まで全て含めた見積もりと節約プラン。",
+    icon: "🚛",
+    path: "/tools/moving-cost",
+    category: "お金",
+    keywords: ["引っ越し費用", "引っ越し計算", "初期費用", "敷金礼金", "引越し見積もり"],
+  },
 ];
