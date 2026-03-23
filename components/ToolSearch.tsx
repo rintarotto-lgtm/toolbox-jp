@@ -6,6 +6,8 @@ import type { Tool } from "@/lib/tools";
 
 const categories = [
   { key: "all", label: "すべて", icon: "🔧" },
+  { key: "フリマ", label: "フリマ", icon: "💰" },
+  { key: "お金", label: "お金", icon: "📊" },
   { key: "テキスト", label: "テキスト", icon: "📝" },
   { key: "開発", label: "開発", icon: "💻" },
   { key: "デザイン", label: "デザイン", icon: "🎨" },

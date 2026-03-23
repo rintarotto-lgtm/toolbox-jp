@@ -639,4 +639,22 @@ export const tools: Tool[] = [
     category: "テキスト",
     keywords: ["テキスト読み上げ", "音声合成", "TTS", "Web Speech API"],
   },
+  {
+    id: "mercari-calc",
+    name: "メルカリ利益計算機",
+    description: "メルカリの手数料10%・全配送方法の送料・振込手数料を自動計算。送料比較表で最安配送も一目でわかる。",
+    icon: "💰",
+    path: "/tools/mercari-calc",
+    category: "フリマ",
+    keywords: ["メルカリ計算", "メルカリ手数料", "メルカリ利益", "メルカリ送料", "フリマ計算"],
+  },
+  {
+    id: "side-job-tax",
+    name: "副業の税金計算機",
+    description: "副業したら手取りは結局いくら増える？本業年収と副業収入を入れるだけで所得税・住民税・確定申告の要否を瞬時計算。",
+    icon: "📊",
+    path: "/tools/side-job-tax",
+    category: "お金",
+    keywords: ["副業税金", "副業確定申告", "副業手取り", "副業計算", "所得税計算"],
+  },
 ];
