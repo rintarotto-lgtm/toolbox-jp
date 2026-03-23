@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "JWTトークンをデコードしてHeader・Payload・Signatureを表示。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.net/tools/jwt-decoder",
+    canonical: "https://www.toolbox-jp.net/tools/jwt-decoder",
   },
 };
 

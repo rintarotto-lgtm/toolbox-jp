@@ -9,7 +9,7 @@ export default function OgPreview() {
   const [title, setTitle] = useState("ツールボックス - 無料オンラインツール集");
   const [description, setDescription] = useState("開発者・デザイナー向けの便利なオンラインツールを50種類以上無料で提供。");
   const [image, setImage] = useState("");
-  const [url, setUrl] = useState("https://toolbox-jp.net");
+  const [url, setUrl] = useState("https://www.toolbox-jp.net");
   const [siteName, setSiteName] = useState("ツールボックス");
   const [preview, setPreview] = useState<"twitter" | "facebook" | "slack">("twitter");
 

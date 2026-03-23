@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "Unixタイムスタンプと日時を相互変換。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.net/tools/unix-time",
+    canonical: "https://www.toolbox-jp.net/tools/unix-time",
   },
 };
 

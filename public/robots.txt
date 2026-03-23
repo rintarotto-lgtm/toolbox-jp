@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://toolbox-jp.net/sitemap.xml
+Sitemap: https://www.toolbox-jp.net/sitemap.xml

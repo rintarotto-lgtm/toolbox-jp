@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "CSSを圧縮（ミニファイ）して軽量化、または整形して可読性向上。ファイルサイズの削減率も表示。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.net/tools/css-minify",
+    canonical: "https://www.toolbox-jp.net/tools/css-minify",
   },
 };
 

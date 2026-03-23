@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ローマ字変換 - ひらがな・カタカナをローマ字に変換",
   description: "ひらがな・カタカナをローマ字に変換。ヘボン式・訓令式に対応。リアルタイム変換でパスポート申請や名前のローマ字表記確認に最適。無料オンラインツール。",
-  alternates: { canonical: "https://toolbox-jp.net/tools/romaji" },
+  alternates: { canonical: "https://www.toolbox-jp.net/tools/romaji" },
   openGraph: {
     title: "ローマ字変換 - ひらがな・カタカナをローマ字に変換",
     description: "ひらがな・カタカナをローマ字に変換。ヘボン式・訓令式対応。リアルタイム変換。",
-    url: "https://toolbox-jp.net/tools/romaji",
+    url: "https://www.toolbox-jp.net/tools/romaji",
   },
 };
 

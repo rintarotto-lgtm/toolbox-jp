@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "SHA-256等のハッシュ値を即座に生成。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.net/tools/hash-gen",
+    canonical: "https://www.toolbox-jp.net/tools/hash-gen",
   },
 };
 

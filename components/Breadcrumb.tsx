@@ -19,13 +19,13 @@ export default function Breadcrumb() {
         "@type": "ListItem",
         position: 1,
         name: "ホーム",
-        item: "https://toolbox-jp.net",
+        item: "https://www.toolbox-jp.net",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: tool.name,
-        item: `https://toolbox-jp.net${tool.path}`,
+        item: `https://www.toolbox-jp.net${tool.path}`,
       },
     ],
   };

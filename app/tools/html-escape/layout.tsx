@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "HTML特殊文字を安全にエスケープ。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.net/tools/html-escape",
+    canonical: "https://www.toolbox-jp.net/tools/html-escape",
   },
 };
 

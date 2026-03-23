@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "各SNSの文字数制限をリアルタイムチェック。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.net/tools/word-counter",
+    canonical: "https://www.toolbox-jp.net/tools/word-counter",
   },
 };
 

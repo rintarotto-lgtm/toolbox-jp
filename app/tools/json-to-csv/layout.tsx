@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "JSON配列をCSVに変換。ブラウザ上で完結。",
   },
   alternates: {
-    canonical: "https://toolbox-jp.net/tools/json-to-csv",
+    canonical: "https://www.toolbox-jp.net/tools/json-to-csv",
   },
 };
 
