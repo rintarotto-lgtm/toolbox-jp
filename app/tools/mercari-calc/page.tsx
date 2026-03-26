@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 /* ─── 配送方法データ ─── */
 interface ShippingMethod {
@@ -796,6 +797,7 @@ export default function MercariCalcPage() {
       {/* 広告 */}
       <div className="mt-8">
         <AdBanner />
+      <RelatedTools currentToolId="mercari-calc" />
       </div>
     </main>
   );

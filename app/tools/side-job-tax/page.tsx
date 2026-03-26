@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 /** 給与所得控除を計算 */
 function calcEmploymentDeduction(salary: number): number {
@@ -304,6 +305,7 @@ export default function SideJobTaxCalc() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="side-job-tax" />
 
       {/* 使い方 */}
       <section className="mt-10 bg-white rounded-xl border border-gray-200 p-6">

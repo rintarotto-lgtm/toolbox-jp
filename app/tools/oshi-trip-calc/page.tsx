@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 /* ─── 定数 ─── */
 
@@ -671,6 +672,7 @@ export default function OshiTripCalc() {
 
       <div className="mt-10">
         <AdBanner />
+      <RelatedTools currentToolId="oshi-trip-calc" />
       </div>
 
       {/* Tailwind utility styles for inputs */}

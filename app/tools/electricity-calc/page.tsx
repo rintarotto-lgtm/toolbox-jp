@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 /* ─── Types ─── */
 interface Preset {
@@ -109,6 +110,7 @@ export default function ElectricityCalc() {
       {tab === "saving" && <SavingMode rate={rate} />}
 
       <AdBanner />
+      <RelatedTools currentToolId="electricity-calc" />
 
       <section className="mt-10 bg-white rounded-xl border border-gray-200 p-6">
         <h2 className="font-bold text-gray-900 mb-3">

@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 /* ─── Types ─── */
 interface CostItem {
@@ -460,6 +461,7 @@ export default function LivingCostSimulator() {
       )}
 
       <AdBanner />
+      <RelatedTools currentToolId="living-cost" />
     </div>
   );
 }

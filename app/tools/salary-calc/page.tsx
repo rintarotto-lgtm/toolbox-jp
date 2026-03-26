@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 /* ─── Helpers ─── */
 
@@ -336,6 +337,7 @@ export default function SalaryCalc() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="salary-calc" />
 
       {/* ─── Calculation Details ─── */}
       <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-6">

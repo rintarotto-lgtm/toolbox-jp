@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import AdBanner from "@/components/AdBanner";
+import RelatedTools from "@/components/RelatedTools";
 
 const HOUSING_TYPES = [
   "ワンルーム/1K",
@@ -488,6 +489,7 @@ export default function MovingCostCalc() {
       </div>
 
       <AdBanner />
+      <RelatedTools currentToolId="moving-cost" />
 
       <section className="mt-10 bg-white rounded-xl border border-gray-200 p-6">
         <h2 className="font-bold text-gray-900 mb-3">
