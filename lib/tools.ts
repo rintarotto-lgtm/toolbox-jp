@@ -720,4 +720,13 @@ export const tools: Tool[] = [
     category: "お金",
     keywords: ["スマホ料金比較", "格安SIM", "スマホ節約", "携帯料金", "ahamo"],
   },
+  {
+    id: "wedding-cost",
+    name: "結婚費用シミュレーター",
+    description: "結婚式・披露宴・指輪・新婚旅行・新生活準備の総額を一括計算。ご祝儀との差額や自己負担額もわかる。",
+    icon: "💒",
+    path: "/tools/wedding-cost",
+    category: "お金",
+    keywords: ["結婚費用", "結婚式費用", "ウェディング費用", "ご祝儀計算", "結婚式相場"],
+  },
 ];
