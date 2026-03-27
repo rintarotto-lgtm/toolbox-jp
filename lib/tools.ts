@@ -702,4 +702,22 @@ export const tools: Tool[] = [
     category: "お金",
     keywords: ["生活費", "一人暮らし費用", "生活費計算", "一人暮らしシミュレーション"],
   },
+  {
+    id: "pet-cost",
+    name: "ペット費用シミュレーター",
+    description: "犬・猫を飼う生涯費用を計算。初期費用・月々のエサ代・医療費・トリミング代まで一括シミュレーション。",
+    icon: "🐾",
+    path: "/tools/pet-cost",
+    category: "お金",
+    keywords: ["ペット費用", "犬費用", "猫費用", "ペット生涯費用", "ペット飼育費"],
+  },
+  {
+    id: "mobile-savings",
+    name: "スマホ料金節約シミュレーター",
+    description: "今のスマホ料金と格安SIM・サブブランドを比較。乗り換えで年間いくら節約できるか瞬時に計算。",
+    icon: "📱",
+    path: "/tools/mobile-savings",
+    category: "お金",
+    keywords: ["スマホ料金比較", "格安SIM", "スマホ節約", "携帯料金", "ahamo"],
+  },
 ];
