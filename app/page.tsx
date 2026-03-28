@@ -3,11 +3,68 @@ import AdBanner from "@/components/AdBanner";
 import ToolSearch from "@/components/ToolSearch";
 import { tools } from "@/lib/tools";
 
+const BASE = "https://www.toolbox-jp.net";
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "無料オンラインツール一覧",
+  description: "ツールボックスの全ツール一覧",
+  numberOfItems: tools.length,
+  itemListElement: tools.map((t, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: t.name,
+    url: `${BASE}${t.path}`,
+  })),
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "ツールボックスは無料で使えますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい、全てのツールは完全無料でご利用いただけます。会員登録も不要です。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "入力したデータはサーバーに送信されますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "いいえ、全てのツールはブラウザ上で動作するため、入力したデータがサーバーに送信されることはありません。プライバシーが守られた状態でご利用いただけます。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "スマートフォンでも使えますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい、PC・スマートフォン・タブレット全てに対応しています。インストール不要でブラウザからそのままご利用いただけます。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "どんなツールがありますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `現在${tools.length}種類のツールを提供しています。文字数カウント、JSON整形、QRコード生成、パスワード生成、給料手取り計算、BMI計算、ローン計算、電気代計算など、Web開発・デザイン・生活に役立つツールを網羅しています。`,
+      },
+    },
+  ],
+};
+
 const categoryOrder = ["フリマ", "お金", "推し活", "テキスト", "開発", "計算", "デザイン", "セキュリティ", "画像"] as const;
 
 export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 sm:py-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="text-center mb-6 sm:mb-10">
         <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">🧰</div>
         <h1 className="text-2xl sm:text-4xl font-bold text-gray-900">
@@ -55,7 +112,27 @@ export default function Home() {
         })}
       </section>
 
-      <section className="mt-16 bg-white rounded-xl border border-gray-200 p-8">
+      <section className="mt-12 bg-white rounded-xl border border-gray-200 p-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">よくある質問</h2>
+        <div className="space-y-5">
+          {[
+            { q: "ツールボックスは無料で使えますか？", a: "はい、全てのツールは完全無料でご利用いただけます。会員登録も不要です。" },
+            { q: "入力したデータはサーバーに送信されますか？", a: "いいえ、全てのツールはブラウザ上で動作するため、入力したデータがサーバーに送信されることはありません。プライバシーが守られた状態でご利用いただけます。" },
+            { q: "スマートフォンでも使えますか？", a: "はい、PC・スマートフォン・タブレット全てに対応しています。インストール不要でブラウザからそのままご利用いただけます。" },
+            { q: "どんなツールがありますか？", a: `現在${tools.length}種類のツールを提供しています。文字数カウント、JSON整形、QRコード生成、パスワード生成、給料手取り計算、BMI計算、ローン計算、電気代計算など、Web開発・デザイン・生活に役立つツールを網羅しています。` },
+          ].map(({ q, a }) => (
+            <details key={q} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <summary className="text-sm font-semibold text-gray-800 cursor-pointer hover:text-blue-600 list-none flex justify-between items-center">
+                {q}
+                <span className="text-gray-400 ml-2">＋</span>
+              </summary>
+              <p className="mt-2 text-sm text-gray-600 leading-relaxed">{a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-6 bg-white rounded-xl border border-gray-200 p-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">ツールボックスについて</h2>
         <div className="text-sm text-gray-600 space-y-3 leading-relaxed">
           <p>

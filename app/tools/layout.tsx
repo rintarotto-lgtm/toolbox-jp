@@ -1,11 +1,33 @@
-import Breadcrumb from "@/components/Breadcrumb";
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "ホーム",
+      item: "https://www.toolbox-jp.net",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "ツール一覧",
+      item: "https://www.toolbox-jp.net",
+    },
+  ],
+};
 
-export default function ToolsLayout({ children }: { children: React.ReactNode }) {
+export default function ToolsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
-      <div className="max-w-4xl mx-auto px-4 pt-4">
-        <Breadcrumb />
-      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       {children}
     </>
   );

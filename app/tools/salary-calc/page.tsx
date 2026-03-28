@@ -367,6 +367,27 @@ export default function SalaryCalc() {
         </ol>
       </div>
 
+      {/* ─── FAQ ─── */}
+      <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-6">
+        <h2 className="text-lg font-bold text-gray-900 mb-4">よくある質問</h2>
+        <div className="space-y-4">
+          {[
+            { q: "年収500万円の手取りはいくら？", a: "約387万円（手取り率約77%）が目安です。所得税・住民税・社会保険料を差し引いた金額です。扶養家族や各種控除によって変わります。" },
+            { q: "社会保険料はどのくらいかかる？", a: "年収の約15%が目安です。健康保険料（約5%）＋厚生年金（約9%）＋雇用保険（約0.6%）で、会社と折半負担します。" },
+            { q: "手取りが額面の何%か知りたい", a: "一般的に年収の75〜80%が手取りの目安です。年収が高くなるほど税率が上がるため、手取り率は下がる傾向があります。" },
+            { q: "住民税はいつから引かれる？", a: "住民税は前年度の所得に対して翌年6月から徴収されます。転職直後や初年度は住民税がかからないケースもあります。" },
+          ].map(({ q, a }) => (
+            <details key={q} className="border-b border-gray-100 pb-3 last:border-0 last:pb-0">
+              <summary className="text-sm font-semibold text-gray-800 cursor-pointer hover:text-emerald-600 list-none flex justify-between items-center">
+                {q}
+                <span className="text-gray-400 ml-2 shrink-0">＋</span>
+              </summary>
+              <p className="mt-2 text-sm text-gray-600 leading-relaxed">{a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
       {/* ─── Disclaimer ─── */}
       <p className="text-xs text-gray-400 leading-relaxed">
         ※
