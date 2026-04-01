@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
-const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID || "";
+const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID || "ca-pub-8866029031640445";
 
 export const metadata: Metadata = {
   title: {
