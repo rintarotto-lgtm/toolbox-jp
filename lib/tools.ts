@@ -6,6 +6,7 @@ export interface Tool {
   path: string;
   category: string;
   keywords: string[];
+  related?: string[]; // 関連ツールID（優先順）
 }
 
 export const tools: Tool[] = [
@@ -692,6 +693,7 @@ export const tools: Tool[] = [
     path: "/tools/salary-calc",
     category: "お金",
     keywords: ["手取り計算", "給料計算", "年収手取り", "所得税", "住民税"],
+    related: ["ideco-calc", "nisa-calc", "furusato-nozei", "tax-calc", "living-cost", "pension-calc"],
   },
   {
     id: "living-cost",
@@ -746,6 +748,7 @@ export const tools: Tool[] = [
     path: "/tools/ideco-calc",
     category: "お金",
     keywords: ["iDeCo", "iDeCo節税", "個人型確定拠出年金", "iDeCo計算", "老後資産"],
+    related: ["nisa-calc", "pension-calc", "salary-calc", "furusato-nozei", "retirement-calc", "medical-deduction"],
   },
   {
     id: "retirement-calc",
@@ -782,6 +785,7 @@ export const tools: Tool[] = [
     path: "/tools/nisa-calc",
     category: "お金",
     keywords: ["NISA積立", "新NISA計算", "NISAシミュレーション", "つみたてNISA", "資産運用計算"],
+    related: ["ideco-calc", "pension-calc", "salary-calc", "furusato-nozei", "retirement-calc", "mortgage-deduction"],
   },
   {
     id: "inheritance-tax",

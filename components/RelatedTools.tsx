@@ -11,16 +11,21 @@ export default function RelatedTools({ currentToolId }: Props) {
   const currentTool = tools.find((t) => t.id === currentToolId);
   if (!currentTool) return null;
 
-  // Same category first, then random others
+  // Priority: explicit related list → same category → others
+  const explicitRelated = (currentTool.related || [])
+    .map((id) => tools.find((t) => t.id === id))
+    .filter((t): t is NonNullable<typeof t> => !!t);
+
+  const explicitIds = new Set(currentTool.related || []);
   const sameCategory = tools.filter(
-    (t) => t.id !== currentToolId && t.category === currentTool.category
+    (t) => t.id !== currentToolId && t.category === currentTool.category && !explicitIds.has(t.id)
   );
   const otherCategory = tools.filter(
-    (t) => t.id !== currentToolId && t.category !== currentTool.category
+    (t) => t.id !== currentToolId && t.category !== currentTool.category && !explicitIds.has(t.id)
   );
 
-  // Deterministic selection: same category first, then others in stable order
   const related = [
+    ...explicitRelated,
     ...sameCategory,
     ...otherCategory,
   ].slice(0, 6);
