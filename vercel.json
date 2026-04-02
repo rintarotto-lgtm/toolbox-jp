@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "toolbox-jp.vercel.app"
+        }
+      ],
+      "destination": "https://www.toolbox-jp.net/$1",
+      "permanent": true
+    }
+  ]
+}
