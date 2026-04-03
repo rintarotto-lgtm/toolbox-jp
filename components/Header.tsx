@@ -10,7 +10,7 @@ export default function Header() {
         </Link>
         <nav className="hidden sm:flex gap-6 text-sm text-gray-600">
           <Link href="/" className="hover:text-gray-900">ツール一覧</Link>
-          <span className="text-gray-400">150+ツール無料</span>
+          <span className="text-gray-400">170+ツール無料</span>
         </nav>
       </div>
     </header>
